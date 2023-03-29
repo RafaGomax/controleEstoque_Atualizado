@@ -1,7 +1,7 @@
 <?php
 	$servidor = "localhost";
 	$usuario = "root";
-	$senha = ""; 
+	$senha = "Phas2001"; 
 	$dbname = "estoque";
 	
 	
