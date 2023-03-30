@@ -34,7 +34,7 @@
         else{
             echo "<script>window.confirm('Usuário sem permição de acesso, solicite ao ADM liberação de seu acesso.');</script>";
 
-            echo "<script>window.location.replace('login.php');</script>";
+            echo "<script>window.location.replace('index.php');</script>";
         }
         
   
