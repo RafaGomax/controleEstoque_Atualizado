@@ -36,8 +36,7 @@ if (isset($_POST['search'])) {
 
 	<link rel="stylesheet" href="style.css"> <!-- Adiciona o arquivo CSS -->
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 	<style type="text/css">
 		body {
@@ -60,6 +59,9 @@ if (isset($_POST['search'])) {
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
+			<div class="d-flex justify-content-end">
+				<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
@@ -89,9 +91,9 @@ if (isset($_POST['search'])) {
 		</tr>
 
 
-		<?php while ($row = mysqli_fetch_array($result)):
+		<?php while ($row = mysqli_fetch_array($result)) :
 
-			?>
+		?>
 
 
 			<tr>

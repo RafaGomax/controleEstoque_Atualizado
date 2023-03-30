@@ -20,6 +20,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+
+
 	<style type="text/css">
 		
 		body{
@@ -35,10 +37,25 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 		.titulo{
 			text-align: center;
 		}
+
+	
 	</style>
 
 </head>
-<body>
+	<body style="background-image: url('fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner.jpg'); background-size: cover;">
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Controle de Estoque</a>
+				<div class="d-flex justify-content-end">
+					<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+				</div>
+				<div class="d-flex justify-content-end">
+					<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
+				</div>
+			</div>
+		</nav>
+
+
 	<?php
 
 	function gerar_codigo() {
@@ -61,8 +78,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 		
 	<form action="scItem.php" method="POST" >
-		<div class="mb-3">
-			<a href="sair.php">Sair</a>
+		<div class="mb-3"><br>
+			
 			<h1 class="titulo">Cadastro de Itens</h1>
 
 			<input type="hidden" name="codigo" value="<?php echo $codigo_gerado;?>">

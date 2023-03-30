@@ -3,9 +3,9 @@ session_start();
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    // Redireciona para a página de login
-    header('Location: index.php');
-    exit;
+	// Redireciona para a página de login
+	header('Location: index.php');
+	exit;
 }
 
 
@@ -14,26 +14,41 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 <?php
 
-include("conexao.php"); 
+include("conexao.php");
 
 $sql = "SELECT * FROM item";
 $result = mysqli_query($conn, $sql);
 
-if(isset($_POST['search'])) {
-  $search_term = mysqli_real_escape_string($conn, $_POST['search']);
-  $sql .= " WHERE nome LIKE '%{$search_term}%'";
-  $result = mysqli_query($conn, $sql);
+if (isset($_POST['search'])) {
+	$search_term = mysqli_real_escape_string($conn, $_POST['search']);
+	$sql .= " WHERE nome LIKE '%{$search_term}%'";
+	$result = mysqli_query($conn, $sql);
 }
 
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Lista de Dados</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 </head>
-<body>
-	<a href="sair.php">Sair</a>
+
+<body style="background-image: url('fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner.jpg'); background-size: cover;">
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Controle de Estoque</a>
+			<div class="d-flex justify-content-end">
+				<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+			</div>
+			<div class="d-flex justify-content-end">
+				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
+			</div>
+		</div>
+	</nav>
 	<h1>Lista de Dados</h1>
 
 	<form method="post">
@@ -51,14 +66,14 @@ if(isset($_POST['search'])) {
 			<th>Valor Médio</th>
 			<th>Estoque Atual</th>
 			<th>Família</th>
-			<th>Exclusão</th>
+			<th>Adicionar</th>
 		</tr>
 
 
-		<?php while($row = mysqli_fetch_array($result)): 
+		<?php while ($row = mysqli_fetch_array($result)) :
 
-			?>
-			
+		?>
+
 
 			<tr>
 				<td><?php echo $row['id']; ?></td>
@@ -67,12 +82,13 @@ if(isset($_POST['search'])) {
 				<td><?php echo $row['valor']; ?></td>
 				<td><?php echo $row['quant_estoque']; ?></td>
 				<td><?php echo $row['familia']; ?></td>
-				<td><a href="scriptAdd.php?id=<?php echo $row['id'];?>" class="text-danger">Adicionar saldo</a></td>
+				<td><a href="scriptAdd.php?id=<?php echo $row['id']; ?>" class="text-danger">Adicionar saldo</a></td>
 			</tr>
 		<?php endwhile; ?>
 	</table>
 
 </body>
+
 </html>
 
 <?php

@@ -13,6 +13,7 @@
             session_start(); //Iniciando a sessão
             $_SESSION['nome'] = $linha['nome'];
             $_SESSION['id'] = $linha['id'];
+            $_SESSION['tipo'] = $linha['tipo'];
             $_SESSION['logged_in'] = true;
 
             $tipo = $linha['tipo'];
