@@ -25,9 +25,11 @@
            body{
             text-align: center;
             background-color: blueviolet;
+            /*Background que estiliza o fundo da tela de login em forma de degrade */
+            background-image: radial-gradient(circle at 12.5% 12.5%, #bbbdff 0, #8196ff 25%, #486ee5 50%, #0048a4 75%, #002669 100%);
            }
 
-
+           /*Classe que estiliza div principal da tela*/          
             .bg-glass {
                 background-color: hsla(0, 0%, 100%, 0.9) !important;
                 backdrop-filter: saturate(200%) blur(25px);

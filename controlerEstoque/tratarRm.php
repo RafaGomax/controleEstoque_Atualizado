@@ -38,6 +38,11 @@ $item = $_GET['id'];
 		.titulo {
 			text-align: center;
 		}
+
+		/*encosta o voltar no canto direito*/
+		.voltar {
+			margin-left: 850px;
+		}
 	</style>
 
 </head>
@@ -50,13 +55,13 @@ $item = $_GET['id'];
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="listagemRequisicao.php" class="btn btn-secondary me-3 ">Voltar</a>
+				<a href="listagemRequisicao.php" class="btn btn-secondary me-3 voltar">Voltar</a>
 			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
-	</nav>
+	</nav><br>
 	<form action="finalizarRm.php" method="POST">
 
 		<h1 class="titulo">Dados da Requisição</h1>

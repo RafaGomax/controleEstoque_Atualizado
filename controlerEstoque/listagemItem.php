@@ -37,6 +37,11 @@ if (isset($_POST['search'])) {
 		h1{
 			text-align: center;
 		}
+		/*encosta o voltar no canto direito*/
+		.voltar{
+			margin-left: 850px;
+			
+		}
 
 
 	</style>
@@ -48,7 +53,7 @@ if (isset($_POST['search'])) {
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+				<a href="voltar.php" class="btn btn-secondary me-3 voltar">Voltar</a>
 			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>

@@ -35,6 +35,12 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
         .titulo {
             text-align: center;
         }
+
+        	/*encosta o voltar no canto direito*/
+		.voltar {
+			margin-left: 850px;
+		}
+
     </style>
 
 </head>
@@ -44,7 +50,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Controle de Estoque</a>
             <div class="d-flex justify-content-end">
-                <a href="voltar.php" class="btn btn-secondary me-3">Voltar</a>
+                <a href="voltar.php" class="btn btn-secondary me-3 voltar">Voltar</a>
             </div>
             <div class="d-flex justify-content-end">
                 <a href="sair.php" class="btn btn-secondary me-3">Sair</a>
@@ -74,7 +80,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 
     <form action="salvarUsuario.php" method="POST">
-        <div class="mb-3">
+        <div class="mb-3"><br>
 
             <h1 class="titulo">Cadastro de Usuário</h1>
 

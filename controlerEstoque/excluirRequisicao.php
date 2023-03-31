@@ -33,7 +33,15 @@ if (isset($_POST['search'])) {
 	<title>Lista de Dados</title>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+<style>
+	/*encosta o voltar no canto direito*/
+	.voltar {
+		margin-left: 850px;
+	}
+	h1{
+		text-align: center;
+	}
+</style>
 </head>
 
 <body style="background-image: url('fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner.jpg'); background-size: cover;">
@@ -41,23 +49,23 @@ if (isset($_POST['search'])) {
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+				<a href="voltar.php" class="btn btn-secondary me-3 voltar">Voltar</a>
 			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
-	</nav>
-	<h1>Lista de RM</h1>
+	</nav><br>
+	<h1>Lista de RM</h1><br>
 
 	<form method="post">
 		<label for="search">Pesquisar por nome:</label>
 		<input type="text" name="search" id="search">
 		<input type="submit" value="Pesquisar">
-	</form>
+	</form><br><br>
 
 	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table>
+	<table class="table table-striped table-bordered table-condensed table-hover">
 		<tr>
 			<th>Id</th>
 			<th>Cod. Item</th>

@@ -22,8 +22,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 	<link rel="stylesheet" href="style.css"> <!-- Adiciona o arquivo CSS -->
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 	<style type="text/css">
 		body {
@@ -32,7 +31,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 		}
 
 		.retangulo {
-			max-width: 450px; 
+			max-width: 450px;
 			margin: 0 auto;
 			background-color: #2f4f4f;
 			padding: 15px;
@@ -40,6 +39,11 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 			margin-top: 50px;
 			border-radius: 10px;
 			margin-bottom: 100px;
+		}
+
+		/*Define o tamanho dos liks nas telas principais */
+		.tam {
+			width: 200px;
 		}
 	</style>
 
@@ -60,16 +64,19 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 		<div class="container mt-4 text-center">
 			<h1>Painel do Administrador</h1>
 			<br><br>
-			<a href="cadastroItem.php" type="button" class="btn btn-primary">Cadastrar Item</a><br><br>
-			<a href="listagemItem.php" type="button" class="btn btn-primary">Pesquisar Item</a><br><br>
-			<a href="excluirItem.php" type="button" class="btn btn-primary">Excluir Item</a><br><br>
-			<a href="excluirUsuario.php" type="button" class="btn btn-primary">Excluir Usuario</a><br><br>
-			<a href="listagemRequisicao.php" type="button" class="btn btn-success">Registrar requisição</a><br><br>
-			<a href="excluirRequisicao.php" type="button" class="btn btn-success">Excluir requisição</a><br><br>
-			<a href="cadastroUsuario.php" type="button" class="btn btn-primary">Cadastrar Usuario</a><br><br>
-			<a href="adcionarSaldo.php" type="button" class="btn btn-primary">Adicionar Saldo</a><br><br>
+			<a href="cadastroItem.php" type="button" class="btn btn-info tam">Cadastrar Item</a><br><br>
+			<a href="cadastroUsuario.php" type="button" class="btn btn-info tam">Cadastrar Usuario</a><br><br>
+			<a href="adcionarSaldo.php" type="button" class="btn btn-info tam">Adicionar Saldo</a><br><br>
+			<a href="listagemRequisicao.php" type="button" class="btn btn-warning tam">Registrar requisição</a><br><br>
+			<a href="listagemItem.php" type="button" class="btn btn-warning tam">Pesquisar Item</a><br><br>
+			<a href="excluirItem.php" type="button" class="btn btn-danger tam">Excluir Item</a><br><br>
+			<a href="excluirUsuario.php" type="button" class="btn btn-danger tam">Excluir Usuario</a><br><br>
+			<a href="excluirRequisicao.php" type="button" class="btn btn-danger tam">Excluir Requisição</a><br><br>
+
+
 		</div>
 	</div>
 
 </body>
+
 </html>

@@ -52,6 +52,11 @@ if (isset($_POST['search'])) {
 			margin-top: 50px;
 			border-radius: 10px;
 		}
+
+		/*encosta o voltar no canto direito*/
+		.voltar {
+			margin-left: 850px;
+		}
 	</style>
 </head>
 
@@ -60,7 +65,7 @@ if (isset($_POST['search'])) {
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="voltar.php" class="btn btn-secondary me-3 ">Voltar</a>
+				<a href="voltar.php" class="btn btn-secondary me-3 voltar ">Voltar</a>
 			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
@@ -76,10 +81,10 @@ if (isset($_POST['search'])) {
 				<input class="btn btn-secondary" type="submit" value="Pesquisar">
 			</div>
 		</form>
-	</div>
+	</div><br>
 
 	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table>
+	<table class="table table-striped table-bordered table-condensed table-hover">
 		<tr>
 			<th class="p-3 text-center">Id</th>
 			<th class="p-3 text-center">Nome</th>
