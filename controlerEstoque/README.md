@@ -6,7 +6,6 @@ link para baixar https://www.apachefriends.org/pt_br/index.html
 
 3º Fazer a instalação do Visual Studio Code
 
-4º E por fim instalar o GitHub 
 
 Apos concluir a instalação dos principais programas, esta com um pequeno erro de comunicação com o banco,
 deve ser abrir a documentação e copiar o arquivo do banco e colar no Mysql para que possa rodar. Deste modo 
