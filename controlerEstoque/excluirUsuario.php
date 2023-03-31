@@ -14,7 +14,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <?php
 
 include("conexao.php");
-
+/*codigo de faz pesquisas */
 $sql = "SELECT * FROM usuario";
 $result = mysqli_query($conn, $sql);
 

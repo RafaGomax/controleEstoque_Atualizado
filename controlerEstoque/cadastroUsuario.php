@@ -57,25 +57,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             </div>
         </div>
     </nav>
-    <?php
-
-    function gerar_codigo()
-    {
-        $codigo = '';
-        $caracteres = '0123456789';
-        $tamanho = 6;
-
-        for ($i = 0; $i < $tamanho; $i++) {
-            $codigo .= $caracteres[rand(0, strlen($caracteres) - 1)];
-        }
-
-        return $codigo;
-    }
-
-    $codigo_gerado = gerar_codigo();
-
-    ?>
-
 
 
 
@@ -83,9 +64,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
         <div class="mb-3"><br>
 
             <h1 class="titulo">Cadastro de Usuário</h1>
-
-            <input type="hidden" name="codigo" value="<?php echo $codigo_gerado; ?>">
-
 
             <label for="exampleFormControlInput1" class="form-label" class="inp">Nome:</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do usuário" name="nome"><br>

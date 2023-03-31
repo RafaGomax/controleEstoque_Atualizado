@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $sql);
 
 if (isset($_POST['search'])) {
 	$search_term = mysqli_real_escape_string($conn, $_POST['search']);
-	$sql .= " WHERE nome LIKE '%{$search_term}%'";
+	$sql .= " WHERE id LIKE '%{$search_term}%'";
 	$result = mysqli_query($conn, $sql);
 }
 
