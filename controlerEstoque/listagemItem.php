@@ -33,6 +33,14 @@ if (isset($_POST['search'])) {
 	<title>Lista de Dados</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+	<style>
+		h1{
+			text-align: center;
+		}
+
+
+	</style>
+
 </head>
 
 <body style="background-image: url('fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner.jpg'); background-size: cover;">
@@ -46,18 +54,18 @@ if (isset($_POST['search'])) {
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
-	</nav>
-	<h1>Lista de Dados</h1>
+	</nav><br>
+	<h1>Lista de Dados</h1><br>
 
 	<form method="post">
 		<label for="search">Pesquisar por nome:</label>
 		<input type="text" name="search" id="search">
-		<input type="submit" value="Pesquisar">
+		<input type="submit" value="Pesquisar"><br><br>
 	</form>
 
 	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table>
-		<tr>
+	<table class="table table-striped table-bordered table-condensed table-hover">
+		<tr >
 			<th>Id</th>
 			<th>Nome</th>
 			<th>Descrição</th>

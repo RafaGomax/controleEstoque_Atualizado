@@ -56,7 +56,7 @@ if (isset($_POST['search'])) {
 	</form>
 
 	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table>
+	<table class="table table-striped table-bordered table-condensed table-hover">
 		<tr>
 			<th>Id</th>
 			<th>Nome</th>
