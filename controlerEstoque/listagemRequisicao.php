@@ -43,19 +43,13 @@ if (isset($_POST['search'])) {
 			color: black;
 		}
 
-		.retangulo {
-			max-width: 450px;
-			margin: 0 auto;
-			background-color: #2f4f4f;
-			padding: 15px;
-			padding-bottom: 20px;
-			margin-top: 50px;
-			border-radius: 10px;
-		}
-
 		/*encosta o voltar no canto direito*/
 		.voltar {
 			margin-left: 850px;
+		}
+
+		h1{
+			text-align: center;
 		}
 	</style>
 </head>
@@ -71,17 +65,14 @@ if (isset($_POST['search'])) {
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
-	</nav>
+	</nav><br>
+	<h1>Lista de Dados</h1><br><br>
 
-	<div class="retangulo">
-		<form method="post">
-			<label class="text-light" for="search">Pesquisar por nome:</label>
-			<input type="text" name="search" id="search">
-			<div class="text-center" style=margin-top:25px>
-				<input class="btn btn-secondary" type="submit" value="Pesquisar">
-			</div>
-		</form>
-	</div><br>
+	<form method="post">
+		<label for="search">Pesquisar por nome:</label>
+		<input type="text" name="search" id="search">
+		<input type="submit" value="Pesquisar">
+	</form><br>
 
 	<!-- Criar uma tabela HTML para exibir os dados -->
 	<table class="table table-striped table-bordered table-condensed table-hover">
