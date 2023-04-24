@@ -38,7 +38,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
         	/*encosta o voltar no canto direito*/
 		.voltar {
-			margin-left: 850px;
+			margin-left: 1530px;
 		}
 
     </style>

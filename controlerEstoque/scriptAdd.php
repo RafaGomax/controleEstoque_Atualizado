@@ -30,7 +30,7 @@ $item = $_GET['id'];
 
 		/*encosta o voltar no canto direito*/
 		.voltar {
-			margin-left: 850px;
+			margin-left: 1530px;
 		}
 	</style>
 

@@ -37,7 +37,7 @@ if (isset($_POST['search'])) {
 	<style>
 		/*encosta o voltar no canto direito*/
 		.voltar {
-			margin-left: 850px;
+			margin-left: 1530px;
 		}
 
 		h1{
