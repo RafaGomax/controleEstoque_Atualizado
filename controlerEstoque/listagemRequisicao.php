@@ -68,53 +68,58 @@ if (isset($_POST['search'])) {
 	</nav><br>
 	<h1>Lista de Dados</h1><br><br>
 
-	<form method="post">
-		<label for="search">Pesquisar por nome:</label>
-		<input type="text" name="search" id="search">
-		<input type="submit" value="Pesquisar">
-	</form><br>
+	<div class="container">
+		<form method="post">
+			<label for="search">Pesquisar por nome:</label>
+			<input type="text" name="search" id="search">
+			<input type="submit" value="Pesquisar">
+		</form><br>
 
-	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table class="table table-striped table-bordered table-condensed table-hover">
-		<tr>
-			<th class="p-3 text-center">Id</th>
-			<th class="p-3 text-center">Nome</th>
-			<th class="p-3 text-center">Descrição</th>
-			<th class="p-3 text-center">Valor Médio</th>
-			<th class="p-3 text-center">Estoque Atual</th>
-			<th class="p-3 text-center">Família</th>
-			<th class="p-3 text-center">Requisitar</th>
-		</tr>
-
-
-		<?php while ($row = mysqli_fetch_array($result)) :
-
-		?>
-
-
+		<!-- Criar uma tabela HTML para exibir os dados -->
+		
+		
+		<table class="table table-striped table-bordered table-condensed table-hover">
 			<tr>
-				<td>
-					<?php echo $row['id']; ?>
-				</td>
-				<td>
-					<?php echo $row['nome']; ?>
-				</td>
-				<td>
-					<?php echo $row['descricao']; ?>
-				</td>
-				<td>
-					<?php echo $row['valor']; ?>
-				</td>
-				<td>
-					<?php echo $row['quant_estoque']; ?>
-				</td>
-				<td>
-					<?php echo $row['familia']; ?>
-				</td>
-				<td><a href="tratarRm.php?id=<?php echo $row['id']; ?>" class="text-danger p-3">Gerar Rm</a></td>
+				<th class="p-3 text-center">Id</th>
+				<th class="p-3 text-center">Nome</th>
+				<th class="p-3 text-center">Descrição</th>
+				<th class="p-3 text-center">Valor Médio</th>
+				<th class="p-3 text-center">Estoque Atual</th>
+				<th class="p-3 text-center">Família</th>
+				<th class="p-3 text-center">Requisitar</th>
 			</tr>
-		<?php endwhile; ?>
-	</table>
+
+
+			<?php while ($row = mysqli_fetch_array($result)) :
+
+			?>
+
+
+				<tr>
+					<td>
+						<?php echo $row['id']; ?>
+					</td>
+					<td>
+						<?php echo $row['nome']; ?>
+					</td>
+					<td>
+						<?php echo $row['descricao']; ?>
+					</td>
+					<td>
+						<?php echo $row['valor']; ?>
+					</td>
+					<td>
+						<?php echo $row['quant_estoque']; ?>
+					</td>
+					<td>
+						<?php echo $row['familia']; ?>
+					</td>
+					<td><a href="tratarRm.php?id=<?php echo $row['id']; ?>" class="text-danger p-3">Gerar Rm</a></td>
+				</tr>
+			<?php endwhile; ?>
+		</table>
+
+	</div>
 
 </body>
 

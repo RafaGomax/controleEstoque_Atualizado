@@ -61,36 +61,37 @@ if (isset($_POST['search'])) {
 		</div>
 	</nav><br>
 	<h1>Lista de Dados</h1><br>
+	<div class="container">
+		<form method="post">
+			<label for="search">Pesquisar por nome:</label>
+			<input type="text" name="search" id="search">
+			<input type="submit" value="Pesquisar"><br><br>
+		</form>
 
-	<form method="post">
-		<label for="search">Pesquisar por nome:</label>
-		<input type="text" name="search" id="search">
-		<input type="submit" value="Pesquisar"><br><br>
-	</form>
-
-	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table class="table table-striped table-bordered table-condensed table-hover">
-		<tr >
-			<th>Id</th>
-			<th>Nome</th>
-			<th>Descrição</th>
-			<th>Valor Médio</th>
-			<th>Estoque Atual</th>
-			<th>Família</th>
-		</tr>
-
-
-		<?php while ($row = mysqli_fetch_array($result)) : ?>
-			<tr>
-				<td><?php echo $row['id']; ?></td>
-				<td><?php echo $row['nome']; ?></td>
-				<td><?php echo $row['descricao']; ?></td>
-				<td><?php echo $row['valor']; ?></td>
-				<td><?php echo $row['quant_estoque']; ?></td>
-				<td><?php echo $row['familia']; ?></td>
+		<!-- Criar uma tabela HTML para exibir os dados -->
+		<table class="table table-striped table-bordered table-condensed table-hover">
+			<tr >
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Valor Médio</th>
+				<th>Estoque Atual</th>
+				<th>Família</th>
 			</tr>
-		<?php endwhile; ?>
-	</table>
+
+
+			<?php while ($row = mysqli_fetch_array($result)) : ?>
+				<tr>
+					<td><?php echo $row['id']; ?></td>
+					<td><?php echo $row['nome']; ?></td>
+					<td><?php echo $row['descricao']; ?></td>
+					<td><?php echo $row['valor']; ?></td>
+					<td><?php echo $row['quant_estoque']; ?></td>
+					<td><?php echo $row['familia']; ?></td>
+				</tr>
+			<?php endwhile; ?>
+		</table>
+	</div>
 
 </body>
 

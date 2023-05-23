@@ -59,42 +59,44 @@ if (isset($_POST['search'])) {
 		</div>
 	</nav><br>
 	<h1>Lista de Dados</h1><br><br>
+	<div class="container">
+		<form method="post">
+			<label for="search">Pesquisar por nome:</label>
+			<input type="text" name="search" id="search">
+			<input type="submit" value="Pesquisar">
+		</form><br>
 
-	<form method="post">
-		<label for="search">Pesquisar por nome:</label>
-		<input type="text" name="search" id="search">
-		<input type="submit" value="Pesquisar">
-	</form><br>
-
-	<!-- estiliza a tabela para exibir os dados -->
-	<table class="table table-striped table-bordered table-condensed table-hover">
-		<tr>
-			<th>Id</th>
-			<th>Nome</th>
-			<th>Descrição</th>
-			<th>Valor Médio</th>
-			<th>Estoque Atual</th>
-			<th>Família</th>
-			<th>Adicionar</th>
-		</tr>
-
-
-		<?php while ($row = mysqli_fetch_array($result)) :
-
-		?>
-
-
+		<!-- estiliza a tabela para exibir os dados -->
+		<table class="table table-striped table-bordered table-condensed table-hover">
 			<tr>
-				<td><?php echo $row['id']; ?></td>
-				<td><?php echo $row['nome']; ?></td>
-				<td><?php echo $row['descricao']; ?></td>
-				<td><?php echo $row['valor']; ?></td>
-				<td><?php echo $row['quant_estoque']; ?></td>
-				<td><?php echo $row['familia']; ?></td>
-				<td><a href="scriptAdd.php?id=<?php echo $row['id']; ?>" class="text-danger">Adicionar saldo</a></td>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Valor Médio</th>
+				<th>Estoque Atual</th>
+				<th>Família</th>
+				<th>Adicionar</th>
 			</tr>
-		<?php endwhile; ?>
-	</table>
+
+
+			<?php while ($row = mysqli_fetch_array($result)) :
+
+			?>
+
+
+				<tr>
+					<td><?php echo $row['id']; ?></td>
+					<td><?php echo $row['nome']; ?></td>
+					<td><?php echo $row['descricao']; ?></td>
+					<td><?php echo $row['valor']; ?></td>
+					<td><?php echo $row['quant_estoque']; ?></td>
+					<td><?php echo $row['familia']; ?></td>
+					<td><a href="scriptAdd.php?id=<?php echo $row['id']; ?>" class="text-danger">Adicionar saldo</a></td>
+				</tr>
+			<?php endwhile; ?>
+		</table>
+	</div>
+	
 
 </body>
 

@@ -53,7 +53,9 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <body style="background-image: url('fundo-azul-do-gradiente-de-luxo-abstrato-liso-azul-escuro-com-vinheta-preta-studio-banner.jpg'); background-size: cover;">
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Controle de Estoque</a>
+			<a class="navbar-brand" href="#">
+				<img src="/controlerEstoque/logo.png" width="100" height="30" alt="Logo da página">
+			</a>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>

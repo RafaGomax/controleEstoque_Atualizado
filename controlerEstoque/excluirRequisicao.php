@@ -57,39 +57,41 @@ if (isset($_POST['search'])) {
 		</div>
 	</nav><br>
 	<h1>Lista de RM</h1><br>
+	<div class="container">
 
-	<form method="post">
-		<label for="search">Pesquisar por nome:</label>
-		<input type="text" name="search" id="search">
-		<input type="submit" value="Pesquisar">
-	</form><br><br>
+	
+		<form method="post">
+			<label for="search">Pesquisar por nome:</label>
+			<input type="text" name="search" id="search">
+			<input type="submit" value="Pesquisar">
+		</form><br><br>
 
-	<!-- Criar uma tabela HTML para exibir os dados -->
-	<table class="table table-striped table-bordered table-condensed table-hover">
-		<tr>
-			<th>Id</th>
-			<th>Cod. Item</th>
-			<th>Quantidade</th>
-			<th>Motivo</th>
-			<th>Exclusão</th>
-		</tr>
-
-
-		<?php while ($row = mysqli_fetch_array($result)) :
-
-		?>
-
-
+		<!-- Criar uma tabela HTML para exibir os dados -->
+		<table class="table table-striped table-bordered table-condensed table-hover">
 			<tr>
-				<td><?php echo $row['id']; ?></td>
-				<td><?php echo $row['cod_item']; ?></td>
-				<td><?php echo $row['quant']; ?></td>
-				<td><?php echo $row['motivo']; ?></td>
-				<td><a href="deletaRm.php?id=<?php echo $row['id']; ?>" class="text-danger">Deletar</a></td>
+				<th>Id</th>
+				<th>Cod. Item</th>
+				<th>Quantidade</th>
+				<th>Motivo</th>
+				<th>Exclusão</th>
 			</tr>
-		<?php endwhile; ?>
-	</table>
 
+
+			<?php while ($row = mysqli_fetch_array($result)) :
+
+			?>
+
+
+				<tr>
+					<td><?php echo $row['id']; ?></td>
+					<td><?php echo $row['cod_item']; ?></td>
+					<td><?php echo $row['quant']; ?></td>
+					<td><?php echo $row['motivo']; ?></td>
+					<td><a href="deletaRm.php?id=<?php echo $row['id']; ?>" class="text-danger">Deletar</a></td>
+				</tr>
+			<?php endwhile; ?>
+		</table>
+	</div>
 </body>
 
 </html>

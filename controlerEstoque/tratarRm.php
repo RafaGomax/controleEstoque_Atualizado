@@ -62,25 +62,23 @@ $item = $_GET['id'];
 			</div>
 		</div>
 	</nav><br>
-	<form action="finalizarRm.php" method="POST">
+	<div class="container">
+		<form action="finalizarRm.php" method="POST">
 
-		<h1 class="titulo">Dados da Requisição</h1>
+			<h1 class="titulo">Dados da Requisição</h1>
 
-		<input type="hidden" name="item" value="<?php echo $item; ?>">
-
-
-		<label for="exampleFormControlInput1" class="form-label" class="inp">Quantidade:</label>
-		<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade a ser requisitada" name="quantidade"><br>
-
-		<label for="exampleFormControlInput1" class="form-label" class="inp">Motivo:</label>
-		<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Informe o destino de uso do mateial" name="motivo"><br>
-
-		<input type="submit" name="Gerar Requisição">
-
-	</form>
+			<input type="hidden" name="item" value="<?php echo $item; ?>">
 
 
+			<label for="exampleFormControlInput1" class="form-label" class="inp">Quantidade:</label>
+			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade a ser requisitada" name="quantidade"><br>
 
+			<label for="exampleFormControlInput1" class="form-label" class="inp">Motivo:</label>
+			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Informe o destino de uso do mateial" name="motivo"><br>
+
+			<input type="submit" name="Gerar Requisição">
+		</form>
+	</div>
 
 </body>
 

@@ -48,17 +48,18 @@ $item = $_GET['id'];
 			</div>
 		</div>
 	</nav>
-	<form action="finalizandoAdd.php" method="POST"><br>
+	<div class="container">
+		<form action="finalizandoAdd.php" method="POST"><br>
 
-		<h1 class="titulo">Insersão de saldo</h1>
+			<h1 class="titulo">Inserção de saldo</h1>
+			
+			<input type="hidden" name="item" value="<?php echo $item; ?>">
+			<label for="exampleFormControlInput1" class="form-label" class="inp">Quantidade:</label>
+			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade a ser adicionada no item" name="quantidade"><br>
+			<input type="submit" name="Inserir salto">
 
-		<input type="hidden" name="item" value="<?php echo $item; ?>">
-		<label for="exampleFormControlInput1" class="form-label" class="inp">Quantidade:</label>
-		<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade a ser adicionada no item" name="quantidade"><br>
-		<input type="submit" name="Inserir salto">
-
-	</form>
-
+		</form>
+	</div>
 
 
 
