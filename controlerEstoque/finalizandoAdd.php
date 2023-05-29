@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $linha = mysqli_fetch_array($result);
     $estoqueItem = $linha['quant_estoque'];
-    $add = $quantidade + $estoqueItem;
+    $add = $quantidade + $estoqueItem; 
 }
 
 $sql = "UPDATE item SET quant_estoque = \"$add\" where id = \"$item\"";

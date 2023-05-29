@@ -3,7 +3,7 @@
 	 $nome = $_POST['nome'];
 	 $tipo = $_POST['tipo'];
 	 $email = $_POST['email'];
-	 $senha = md5($_POST['senha']);
+	 $senha = md5($_POST['senha']); 
 
 	 
 

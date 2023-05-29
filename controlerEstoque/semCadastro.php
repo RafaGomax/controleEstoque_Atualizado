@@ -11,7 +11,7 @@
 		window.confirm("Encaminhe um e-mail para o departamento de TI solicitando acesso.");
 		window.location.replace('index.php');
 		
-	</script>
+	</script> 
 
 	
 </body>

@@ -18,7 +18,7 @@
 	
 </head>
 
-<body>
+<body> 
 	<main class="">
 	<section class="background-radial-gradient overflow-hidden">
         <style>

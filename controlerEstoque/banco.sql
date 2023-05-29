@@ -33,6 +33,6 @@ create table usuario(
 
 
 insert into usuario values (null,'Administrador',1,'admin@email.com','202cb962ac59075b964b07152d234b70');
-insert into item values (123123,'Parafuso','Parafuso Sextavado 3/16',1.50,1000,'Parafusos - Aço');
+insert into item values (123123,'Parafuso','Parafuso Sextavado 3/16',1.50,1000,'Parafusos - Aço'); 
 
 

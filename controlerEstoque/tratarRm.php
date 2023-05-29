@@ -78,7 +78,7 @@ $item = $_GET['id'];
 
 			<input type="submit" name="Gerar Requisição">
 		</form>
-	</div>
+	</div> 
 
 </body>
 

@@ -51,7 +51,7 @@ $item = $_GET['id'];
 	<div class="container">
 		<form action="finalizandoAdd.php" method="POST"><br>
 
-			<h1 class="titulo">Inserção de saldo</h1>
+			<h1 class="titulo">Inserção de saldo</h1> 
 			
 			<input type="hidden" name="item" value="<?php echo $item; ?>">
 			<label for="exampleFormControlInput1" class="form-label" class="inp">Quantidade:</label>

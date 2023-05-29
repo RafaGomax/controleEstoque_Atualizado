@@ -8,7 +8,7 @@
 
 
 	 $sql = "insert requisicao values (null,'$item','$quantidade','$motivo', now());";
-
+ 
 	 include("conexao.php"); 
 
 	 if (mysqli_query($conn, $sql)) {

@@ -120,7 +120,7 @@ if (isset($_POST['search'])) {
 		</table>
 
 	</div>
-
+ 
 </body>
 
 </html>

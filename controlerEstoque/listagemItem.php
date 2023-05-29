@@ -89,7 +89,7 @@ if (isset($_POST['search'])) {
 					<td><?php echo $row['quant_estoque']; ?></td>
 					<td><?php echo $row['familia']; ?></td>
 				</tr>
-			<?php endwhile; ?>
+			<?php endwhile; ?> 
 		</table>
 	</div>
 

@@ -58,7 +58,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
   <div class="retangulo">
     <div class="container mt-4 text-center">
-      <h1>Painel do Usuário</h1>
+      <h1>Painel do Usuário</h1> 
       <br><br>
       <a href="cadastroItem.php" type="button" class=" btn btn-info tam">Cadastrar Item</a><br><br>
       <a href="listagemItem.php" type="button" class="btn btn-warning tam">Pesquisar Item</a><br><br>

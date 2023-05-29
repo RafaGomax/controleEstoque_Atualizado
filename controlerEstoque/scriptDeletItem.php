@@ -5,6 +5,6 @@
         mysqli_query($conn, $sql);
         echo "<script>window.location.replace('excluiritem.php');</script>";
 
-    }
+    } 
 
 ?>

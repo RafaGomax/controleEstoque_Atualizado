@@ -9,7 +9,7 @@
             $linha = mysqli_fetch_array($result);
             $item = $linha['cod_item'];
             $quant = $linha['quant'];
-
+ 
             $sql = "SELECT * FROM item WHERE id = \"$item\"";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {

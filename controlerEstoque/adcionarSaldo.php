@@ -66,7 +66,7 @@ if (isset($_POST['search'])) {
 			<input type="submit" value="Pesquisar">
 		</form><br>
 
-		<!-- estiliza a tabela para exibir os dados -->
+		<!-- estiliza a tabela para exibir os dados --> 
 		<table class="table table-striped table-bordered table-condensed table-hover">
 			<tr>
 				<th>Id</th>

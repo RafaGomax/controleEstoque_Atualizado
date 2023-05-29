@@ -7,7 +7,7 @@
     }
     else{
         echo "<script>window.location.replace('painelUsuario.php');</script>";
-    }
+    } 
 
 
 ?>

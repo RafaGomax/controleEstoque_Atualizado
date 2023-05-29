@@ -8,6 +8,6 @@ session_start();
 
     echo "<script> window.confirm('Você foi desconectado com segurança')</script>;";
     echo "<script>window.location.replace('index.php');</script>";  
-  
+   
 
 ?>

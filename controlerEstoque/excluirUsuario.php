@@ -75,7 +75,7 @@ if (isset($_POST['search'])) {
 				<th>Email</th>
 				<th>Exclusão</th>
 
-			</tr>
+			</tr> 
 
 
 			<?php while ($row = mysqli_fetch_array($result)) : ?>

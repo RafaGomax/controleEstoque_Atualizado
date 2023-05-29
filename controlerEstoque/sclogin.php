@@ -16,7 +16,7 @@
             $_SESSION['tipo'] = $linha['tipo'];
             $_SESSION['logged_in'] = true;
 
-            $tipo = $linha['tipo'];
+            $tipo = $linha['tipo']; 
 
             session_write_close(); //Fechando o registro na sessão após a escrita
 
