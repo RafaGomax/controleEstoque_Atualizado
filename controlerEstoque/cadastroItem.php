@@ -24,8 +24,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 	<style type="text/css">
 		body {
-			background-color: black;
-			color: white;
+			background-color: white;
+			color: black;
 
 		}
 
@@ -83,33 +83,34 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 
 	<form action="scItem.php" method="POST">
-		<div class="mb-3"><br>
+		<div class="container col-6">
+			<div class="mb-3"><br>
 
-			<h1 class="titulo">Cadastro de Itens</h1>
+				<h1 class="titulo">Cadastro de Itens</h1>
 
-			<input type="hidden" name="codigo" value="<?php echo $codigo_gerado; ?>">
-
-
-			<label for="exampleFormControlInput1" class="form-label" class="inp">Nome:</label>
-			<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do item" name="nome"><br>
-
-			<label for="exampleFormControlInput1" class="form-label" class="inp">Descrição</label>
-			<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Descrição detalhada do item" name="descricao"><br>
-
-			<label for="exampleFormControlInput1" class="form-label" class="inp">Valor</label>
-			<input type="number" step="0.01" min="0" class="form-control" id="exampleFormControlInput1" placeholder="Custo médio do produto" name="valor"><br>
-
-			<label for="exampleFormControlInput1" class="form-label" class="inp">Estoque inicial:</label>
-			<input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade para iniciar o estoque" name="quantEstoque"><br>
-
-			<label for="exampleFormControlInput1" class="form-label" class="inp">Família:</label>
-			<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Família do item" name="familia"><br>
+				<input type="hidden" name="codigo" value="<?php echo $codigo_gerado; ?>">
 
 
+				<label for="exampleFormControlInput1" class="form-label" class="inp">Nome:</label>
+				<input type="text" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Nome do item" name="nome"><br>
+
+				<label for="exampleFormControlInput1" class="form-label" class="inp">Descrição:</label>
+				<input type="text" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Descrição detalhada do item" name="descricao"><br>
+
+				<label for="exampleFormControlInput1" class="form-label" class="inp">Valor:</label>
+				<input type="number" step="0.01" min="0" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Custo médio do produto" name="valor"><br>
+
+				<label for="exampleFormControlInput1" class="form-label" class="inp">Estoque inicial:</label>
+				<input type="number" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Quantidade para iniciar o estoque" name="quantEstoque"><br>
+
+				<label for="exampleFormControlInput1" class="form-label" class="inp">Família:</label>
+				<input type="text" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Família do item" name="familia"><br>
 
 
-			<input type="submit" name="enviar">
 
+
+				<input type="submit" class="border border-dark border-1" name="enviar">
+		</div>
 	</form>
 	<br>
 
