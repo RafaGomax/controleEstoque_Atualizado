@@ -41,6 +41,11 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 			margin-left: 1530px;
 		}
 
+        .retorno {
+            margin-top: -40px;
+        }
+        
+
     </style> 
 
 </head>
@@ -86,7 +91,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 
 
-                <input type="submit" name="enviar"> 
+                <input type="submit" class="btn btn-secondary me-3" name="enviar"> 
+                <div class="d-flex justify-content-end">
+                    <a href="voltar.php" class="btn btn-secondary me-3 voltar retorno">Voltar</a>
+                </div>
                 
         </form>
         <br>
