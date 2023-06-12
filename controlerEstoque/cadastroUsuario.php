@@ -23,8 +23,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
     <style type="text/css">
         body {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
 
         }
 
@@ -40,6 +40,11 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 		.voltar {
 			margin-left: 1530px;
 		}
+
+        .retorno {
+            margin-top: -40px;
+        }
+        
 
     </style> 
 
@@ -59,37 +64,41 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     </nav>
 
 
+    <div class="container col-8">
+        <form action="salvarUsuario.php" method="POST">
+            <div class="mb-3"><br>
 
-    <form action="salvarUsuario.php" method="POST">
-        <div class="mb-3"><br>
+                <h1 class="titulo">Cadastro de Usuário</h1>
+                <br>
 
-            <h1 class="titulo">Cadastro de Usuário</h1>
+                <label for="exampleFormControlInput1" class="form-label" class="inp">Nome:</label>
+                <input type="text" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Nome do usuário" name="nome"><br>
 
-            <label for="exampleFormControlInput1" class="form-label" class="inp">Nome:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do usuário" name="nome"><br>
+                <label for="exampleFormControlInput1" class="form-label" class="inp">Tipo de Acesso</label>
+                <select  name="tipo">
+                    <option value="1"  class="form-control form-control-sm">Administrador</option>
+                    <option value="2" class="form-control form-control-sm">Usuário Normal</option>
+                </select><br>
 
-            <label for="exampleFormControlInput1" class="form-label" class="inp">Tipo de Acesso</label>
-            <select name="tipo">
-                <option value="1">Aministrador</option>
-                <option value="2">Usuário Normal</option>
-            </select><br>
+                <label for="exampleFormControlInput1" class="form-label" class="inp">Email</label>
+                <input type="text" class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Email" name="email"><br>
 
-            <label for="exampleFormControlInput1" class="form-label" class="inp">Email</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email"><br>
-
-            <label for="exampleFormControlInput1" class="form-label" class="inp">Senha</label>
-            <input class="form-control" id="exampleFormControlInput1" placeholder="Senha" name="senha" type="password"><br>
-
-
-
+                <label for="exampleFormControlInput1" class="form-label" class="inp">Senha</label>
+                <input class="form-control border border-dark border-1" id="exampleFormControlInput1" placeholder="Senha" name="senha" type="password"><br>
 
 
 
-            <input type="submit" name="enviar">
 
-    </form>
-    <br>
 
+
+                <input type="submit" class="btn btn-secondary me-3" name="enviar"> 
+                <div class="d-flex justify-content-end">
+                    <a href="voltar.php" class="btn btn-secondary me-3 voltar retorno">Voltar</a>
+                </div>
+                
+        </form>
+        <br>
+    </div>
 
 
 
