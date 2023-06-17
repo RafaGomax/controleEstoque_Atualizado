@@ -59,9 +59,6 @@ if (isset($_POST['search'])) {
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="voltar.php" class="btn btn-secondary me-3 voltar ">Voltar</a>
-			</div>
-			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
@@ -118,6 +115,9 @@ if (isset($_POST['search'])) {
 				</tr>
 			<?php endwhile; ?>
 		</table>
+		<div class="d-flex justify-content-end mb-5">
+			<a href="voltar.php" class="btn btn-secondary me-3 retorno">Voltar</a>
+		</div>
 
 	</div>
  

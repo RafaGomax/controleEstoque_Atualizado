@@ -67,7 +67,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 			<a href="cadastroItem.php" type="button" class="btn btn-info tam">Cadastrar Item</a><br><br>
 			<a href="cadastroUsuario.php" type="button" class="btn btn-info tam">Cadastrar Usuario</a><br><br>
 			<a href="adcionarSaldo.php" type="button" class="btn btn-info tam">Adicionar Saldo</a><br><br>
-			<a href="listagemRequisicao.php" type="button" class="btn btn-warning tam">Registrar requisição</a><br><br>
+			<a href="listagemRequisicao.php" type="button" class="btn btn-warning tam">Registrar Requisição</a><br><br>
 			<a href="listagemItem.php" type="button" class="btn btn-warning tam">Pesquisar Item</a><br><br>
 			<a href="excluirItem.php" type="button" class="btn btn-danger tam">Excluir Item</a><br><br>
 			<a href="excluirUsuario.php" type="button" class="btn btn-danger tam">Excluir Usuario</a><br><br>

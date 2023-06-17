@@ -43,6 +43,9 @@ $item = $_GET['id'];
 		.voltar {
 			margin-left: 1530px;
 		}
+		.retorno {
+            margin-top: -40px;
+        }
 	</style>
 
 </head>
@@ -54,9 +57,6 @@ $item = $_GET['id'];
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
-			<div class="d-flex justify-content-end">
-				<a href="listagemRequisicao.php" class="btn btn-secondary me-3 voltar">Voltar</a>
-			</div>
 			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
@@ -74,9 +74,12 @@ $item = $_GET['id'];
 			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Quantidade a ser requisitada" name="quantidade"><br>
 
 			<label for="exampleFormControlInput1" class="form-label" class="inp">Motivo:</label>
-			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Informe o destino de uso do mateial" name="motivo"><br>
+			<input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Informe o destino de uso do produto" name="motivo"><br>
 
-			<input type="submit" name="Gerar Requisição">
+			<input type="submit" class="btn btn-secondary me-3" name="Gerar Requisição">
+			<div class="d-flex justify-content-end mb-5">
+				<a href="voltar.php" class="btn btn-secondary me-3 retorno">Voltar</a>
+			</div>
 		</form>
 	</div> 
 

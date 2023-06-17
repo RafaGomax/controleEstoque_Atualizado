@@ -54,9 +54,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Controle de Estoque</a>
 			<div class="d-flex justify-content-end">
-				<a href="voltar.php" class="btn btn-secondary me-3 voltar ">Voltar</a>
-			</div>
-			<div class="d-flex justify-content-end">
 				<a href="sair.php" class="btn btn-secondary me-3">Sair</a>
 			</div>
 		</div>
