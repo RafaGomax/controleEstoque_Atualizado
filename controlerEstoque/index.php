@@ -45,7 +45,7 @@
 
                     <div class="card bg-glass">
                         <div class="text-center card-body px-4 pt-5 px-md-5">
-                            <h1 class="mb-4 display-5 fw-bold ls-tight" style="color: 000">
+                            <h1 class="mb-4 display-5 fw-bold" style="color: 000">
                                 Login
                             </h1>
                             <form action="sclogin.php" method="POST">
