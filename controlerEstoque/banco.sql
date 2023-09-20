@@ -21,6 +21,13 @@ create table requisicao(
 	primary key(id)
 );
 
+create table venda(
+    id int not null auto_increment,
+    valor float not null,
+    CONSTRAINT fk1 FOREIGN KEY (id) REFERENCES item(id)
+    CONSTRAINT fk2 FOREIGN KEY id REFERENCES usuario(id)
+);
+
 create table usuario(
 	id int not null auto_increment, 
     nome varchar(60) not null,
