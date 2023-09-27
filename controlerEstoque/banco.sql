@@ -24,8 +24,8 @@ create table requisicao(
 create table venda(
     id int not null auto_increment,
     valor float not null,
-    CONSTRAINT fk1 FOREIGN KEY (id) REFERENCES item(id)
-    CONSTRAINT fk2 FOREIGN KEY id REFERENCES usuario(id)
+    CONSTRAINT fk1 FOREIGN KEY (id) REFERENCES item(id),
+    CONSTRAINT fk2 FOREIGN KEY (id) REFERENCES usuario(id)
 );
 
 create table usuario(
